@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+<link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css" />
+<script defer src="https://pyscript.net/latest/pyscript.js"></script>
+        <title>Password Generator</title>
+        <link rel="stylesheet" href="style.css">
+
+    </head>
+    <body>
+        <h1>Password Generator!</h1>
+    </body>
+
+<py-script>
+ 
+import random
+
+
+def shuffle(string):
+  tempList = list(string)
+  random.shuffle(tempList)
+  return ''.join(tempList)
+uppercaseLetter1=chr(random.randint(65,90))
+uppercaseLetter2=chr(random.randint(65,90)) 
+lowercaseLetter1=chr(random.randint(97,122))
+punctuationSign1=chr(random.randint(33,38))
+lowercaseLetter2=chr(random.randint(97,122))
+uppercaseLetter3=chr(random.randint(65,90))
+punctuationSign2=chr(random.randint(33,38))
+lowercaseLetter1=chr(random.randint(97,122))
+uppercaseLetter4=chr(random.randint(65,90))
+punctuationSign3=chr(random.randint(33,38))
+uppercaseLetter5=chr(random.randint(65,90))
+lowercaseLetter3=chr(random.randint(97,122))
+lowercaseLetter4=chr(random.randint(97,122))
+
+password = uppercaseLetter1 + uppercaseLetter2 + lowercaseLetter1 + punctuationSign1+ uppercaseLetter3 + punctuationSign2 +lowercaseLetter2+uppercaseLetter4 + punctuationSign3 +uppercaseLetter5+lowercaseLetter3+  lowercaseLetter4
+
+password = shuffle(password)
+
+print(password)
+
+</py-script>
+
+</html>
